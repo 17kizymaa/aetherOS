@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Aether Workbench
+Exec=/usr/local/bin/aether-welcome.sh
+Icon=applications-system
+Terminal=false
+Categories=Utility;Application;
