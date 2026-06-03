@@ -1,0 +1,8 @@
+# packages.creative.txt
+
+# Creative apps (optional)
+libreoffice
+gimp
+inkscape
+audacity
+vlc

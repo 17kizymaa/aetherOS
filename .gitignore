@@ -1,0 +1,10 @@
+work/
+out/
+logs/
+*.iso
+*.img
+*.qcow2
+*.log
+.env
+.env.*
+!.env.example

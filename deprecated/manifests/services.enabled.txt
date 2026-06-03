@@ -1,0 +1,5 @@
+# services.enabled.txt
+
+# Services to enable by default (examples)
+NetworkManager
+lightdm
