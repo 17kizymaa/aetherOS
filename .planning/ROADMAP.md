@@ -6,7 +6,7 @@
 
 ## Overview
 
-5 phases building from foundation up: Base → Desktop → UX → Intelligence → Release.
+5 phases building from foundation up: Base -> Desktop -> UX -> Intelligence -> Release.
 
 ## Phase 1: Foundation & Build System
 
@@ -20,6 +20,15 @@
 5. All contradictory docs updated (ADR, OPERATING_CONTRACT, manifests)
 
 **Requirements:** BOOT-03, BUILD-01, BUILD-02, DOC-04
+
+**Plans:** 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md -- Contradiction resolution: .gitignore, ADR-0004, archive Debian artifacts, update OPERATING_CONTRACT.md
+- [ ] 01-02-PLAN.md -- Profile creation: profiledef.sh, packages.x86_64, pacman.conf, boot configs
+- [ ] 01-03-PLAN.md -- Validation scripts: validate.sh (G0-G3), validate-profile.sh (G1-G2)
+- [ ] 01-04-PLAN.md -- Build scripts: print-build-env.sh, build-iso.sh, smoke-qemu.sh, collect-artifacts.sh
+- [ ] 01-05-PLAN.md -- Documentation: update README.md quick-start, create VERSION, update CHANGELOG.md
 
 **Key Deliverables:**
 - Resolved ADR on base system
