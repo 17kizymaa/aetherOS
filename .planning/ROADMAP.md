@@ -26,14 +26,14 @@
 Plans:
 **Wave 1**
 
-- [ ] 01-01-PLAN.md -- Contradiction resolution: .gitignore, ADR-0004, archive Debian artifacts, update OPERATING_CONTRACT.md
-- [ ] 01-02-PLAN.md -- Profile creation: profiledef.sh, packages.x86_64, pacman.conf, boot configs
-- [ ] 01-03-PLAN.md -- Validation scripts: validate.sh (G0-G3), validate-profile.sh (G1-G2)
-- [ ] 01-04-PLAN.md -- Build scripts: print-build-env.sh, build-iso.sh, smoke-qemu.sh, collect-artifacts.sh
+- [x] 01-01-PLAN.md -- Contradiction resolution: .gitignore, ADR-0004, archive Debian artifacts, update OPERATING_CONTRACT.md
+- [x] 01-02-PLAN.md -- Profile creation: profiledef.sh, packages.x86_64, pacman.conf, boot configs
+- [x] 01-03-PLAN.md -- Validation scripts: validate.sh (G0-G3), validate-profile.sh (G1-G2)
+- [x] 01-04-PLAN.md -- Build scripts: print-build-env.sh, build-iso.sh, smoke-qemu.sh, collect-artifacts.sh
 
-**Wave 2** *(blocked on Wave 1 completion)*
+**Wave 2**
 
-- [ ] 01-05-PLAN.md -- Documentation: update README.md quick-start, create VERSION, update CHANGELOG.md
+- [x] 01-05-PLAN.md -- Documentation: update README.md quick-start, create VERSION, update CHANGELOG.md
 
 **Key Deliverables:**
 
