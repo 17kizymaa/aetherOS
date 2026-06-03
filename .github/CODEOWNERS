@@ -1,0 +1,9 @@
+# Code owners for aetherOS
+# Require reviews for critical paths
+/docs/ @17kizymaa
+/profiles/ @17kizymaa
+/scripts/ @17kizymaa
+/context/ @17kizymaa
+
+# Fallback: require review from repository owner for all changes
+/* @17kizymaa

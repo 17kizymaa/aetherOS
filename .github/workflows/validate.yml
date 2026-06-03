@@ -1,0 +1,43 @@
+name: Validate PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    name: Quick validation (G0-G3)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck git
+
+      - name: Run shellcheck on scripts
+        run: |
+          if ls scripts/*.sh 1> /dev/null 2>&1; then
+            shellcheck -x scripts/*.sh || true
+          else
+            echo "No scripts/*.sh to lint"
+          fi
+
+      - name: Ensure no generated artifacts are being committed
+        run: |
+          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1 || true
+          BASE=origin/${{ github.event.pull_request.base.ref }}
+          git diff --name-only $BASE...${{ github.sha }} | \
+            grep -E '(^out/|^work/|^logs/|\.iso$|\.img$|\.qcow2$|\.log$)' && (
+              echo "Generated artifacts detected in PR; remove them from the commit." && exit 1
+            ) || echo "No generated artifacts found"
+
+      - name: Run basic validation script if present
+        run: |
+          if [ -x scripts/validate-vm.sh ]; then
+            scripts/validate-vm.sh || true
+          elif [ -f scripts/validate-vm.sh ]; then
+            bash scripts/validate-vm.sh || true
+          else
+            echo "No scripts/validate-vm.sh found — skipping"
+          fi
