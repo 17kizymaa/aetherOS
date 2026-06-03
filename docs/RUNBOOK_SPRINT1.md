@@ -343,24 +343,24 @@ Pivot to repository walkthrough, architecture explanation, and recovery plan. Do
 13. Useful Pre-Flight Commands
 Run from repo root where applicable:
 
-Copygit status --short
+git status --short
 git log -1 --oneline
 Check shell syntax:
 
-Copyfind scripts runtime -type f -name "*.sh" -print0 | xargs -0 -n1 bash -n
+find scripts runtime -type f -name "*.sh" -print0 | xargs -0 -n1 bash -n
 Ensure scripts are executable if needed:
 
-Copyfind scripts runtime -type f -name "*.sh" -exec chmod +x {} \;
+find scripts runtime -type f -name "*.sh" -exec chmod +x {} \;
 Basic secret scan:
 
-Copygit grep -nEi "(api[_-]?key|secret|token|password|openrouter|sk-[a-zA-Z0-9])" -- . || true
+git grep -nEi "(api[_-]?key|secret|token|password|openrouter|sk-[a-zA-Z0-9])" -- . || true
 Run validation/reporting:
 
-Copybash scripts/validate-vm.sh
+bash scripts/validate-vm.sh
 bash scripts/collect-system-report.sh
 Append important results to:
 
-Copyops/build-log.md
+ops/build-log.md
 ops/validation-log.md
 docs/known-issues.md
 14. Final Rule
