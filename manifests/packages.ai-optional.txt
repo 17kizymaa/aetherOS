@@ -1,5 +1,0 @@
-# packages.ai-optional.txt
-
-# Optional AI-related tools
-python3-pip
-pip packages: transformers, sentence-transformers (optional, not installed by default)
