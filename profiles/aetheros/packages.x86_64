@@ -1,0 +1,30 @@
+# profiles/aetheros/packages.x86_64
+# Minimal bootable Arch + XFCE system
+# Phase 1: just enough to reach graphical session
+
+# Base system (required by archiso)
+base
+mkinitcpio
+mkinitcpio-archiso
+
+# Kernel
+linux-lts
+
+# Xorg
+xorg-server
+xorg-xinit
+
+# Desktop
+xfce4
+xfce4-goodies
+
+# Display manager
+lightdm
+lightdm-gtk-greeter
+
+# Networking
+networkmanager
+
+# Filesystem tools
+dosfstools
+e2fsprogs
