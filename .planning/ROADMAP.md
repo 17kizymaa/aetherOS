@@ -13,6 +13,7 @@
 **Goal:** Resolve base system contradictions and establish working mkarchiso build pipeline.
 
 **Success Criteria:**
+
 1. Base system decision documented (Arch + mkarchiso)
 2. `profiles/aetheros/` exists with valid `profiledef.sh`, `packages.x86_64`, `pacman.conf`
 3. `./scripts/validate.sh` passes
@@ -22,15 +23,20 @@
 **Requirements:** BOOT-03, BUILD-01, BUILD-02, DOC-04
 
 **Plans:** 5 plans
-
 Plans:
+**Wave 1**
+
 - [ ] 01-01-PLAN.md -- Contradiction resolution: .gitignore, ADR-0004, archive Debian artifacts, update OPERATING_CONTRACT.md
 - [ ] 01-02-PLAN.md -- Profile creation: profiledef.sh, packages.x86_64, pacman.conf, boot configs
 - [ ] 01-03-PLAN.md -- Validation scripts: validate.sh (G0-G3), validate-profile.sh (G1-G2)
 - [ ] 01-04-PLAN.md -- Build scripts: print-build-env.sh, build-iso.sh, smoke-qemu.sh, collect-artifacts.sh
+
+**Wave 2** *(blocked on Wave 1 completion)*
+
 - [ ] 01-05-PLAN.md -- Documentation: update README.md quick-start, create VERSION, update CHANGELOG.md
 
 **Key Deliverables:**
+
 - Resolved ADR on base system
 - Working mkarchiso profile
 - Build scripts (validate, build, smoke, collect-artifacts)
@@ -41,6 +47,7 @@ Plans:
 **Goal:** Boot to responsive XFCE desktop in QEMU with 2 GB RAM.
 
 **Success Criteria:**
+
 1. ISO boots in QEMU with 2 GB RAM
 2. System reaches XFCE graphical session
 3. LightDM auto-login works
@@ -51,6 +58,7 @@ Plans:
 **Requirements:** BOOT-01, BOOT-02, BOOT-04, UX-05, AI-03, AI-04
 
 **Key Deliverables:**
+
 - XFCE + LightDM configuration in airootfs
 - zram enabled for RAM optimization
 - Minimal package set (no bloat)
@@ -61,6 +69,7 @@ Plans:
 **Goal:** Core apps work and help documentation is accessible.
 
 **Success Criteria:**
+
 1. Terminal opens and is responsive
 2. File manager opens and is responsive
 3. Text editor opens and is responsive
@@ -71,6 +80,7 @@ Plans:
 **Requirements:** UX-01, UX-02, UX-03, UX-04, AI-01, AI-02
 
 **Key Deliverables:**
+
 - Verified core apps (xfce4-terminal, thunar, mousepad)
 - Help document on desktop
 - .env.example file
@@ -81,6 +91,7 @@ Plans:
 **Goal:** Auto-detection and smart categorization of existing content.
 
 **Success Criteria:**
+
 1. System detects existing folder structure at first boot
 2. Content categorized (Projects, Photos, Documents) without user input
 3. Searchable unified view of local content
@@ -89,6 +100,7 @@ Plans:
 **Requirements:** RECOG-01, RECOG-02, RECOG-03, RECOG-04
 
 **Key Deliverables:**
+
 - Filesystem scanning script
 - Heuristic-based categorization
 - Search integration (ripgrep-based)
@@ -99,6 +111,7 @@ Plans:
 **Goal:** Reproducible build with full provenance and documentation.
 
 **Success Criteria:**
+
 1. `./scripts/collect-artifacts.sh` generates SHA256 checksum
 2. Build metadata captured (archiso version, git SHA, timestamp)
 3. `context/CURRENT_STATE.md` reflects actual state
@@ -110,6 +123,7 @@ Plans:
 **Requirements:** BUILD-03, BUILD-04, DOC-01, DOC-02, DOC-03
 
 **Key Deliverables:**
+
 - Artifact collection script
 - SHA256 checksums
 - Release manifest
