@@ -35,3 +35,6 @@ thunar
 mousepad
 firefox
 zram-generator
+
+# Phase 4: Content recognition
+ripgrep

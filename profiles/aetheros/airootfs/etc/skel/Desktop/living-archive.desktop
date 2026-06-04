@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Living Archive
+Comment=Search and browse your content
+Exec=/usr/bin/living-archive-search
+Type=Application
+Terminal=false
+Categories=Utility;
+Icon=folder

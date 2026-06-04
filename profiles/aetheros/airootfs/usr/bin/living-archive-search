@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# /usr/bin/living-archive-search — Search interface for Living Archive (RECOG-03)
+
+set -euo pipefail
+
+ARCHIVE_DIR="${HOME}/.local/share/living-archive"
+
+show_menu() {
+    local choice
+    choice=$(zenity --list --radiolist --title="Living Archive" \
+        --column="" --column="Action" \
+        TRUE "Search Projects" \
+        FALSE "Search Photos" \
+        FALSE "Search Documents" \
+        FALSE "View Categories" \
+        2>/dev/null) || exit 0
+
+    case "${choice}" in
+        "Search Projects") search_projects ;;
+        "Search Photos") search_photos ;;
+        "Search Documents") search_documents ;;
+        "View Categories") view_categories ;;
+    esac
+}
+
+search_projects() {
+    local query="${1:-}"
+    if [ -d "${ARCHIVE_DIR}" ]; then
+        rg -i --files "${ARCHIVE_DIR}" 2>/dev/null | head -50 || echo "No projects cataloged"
+    fi
+}
+
+search_photos() {
+    echo "Photos search: use file manager for image browsing"
+}
+
+search_documents() {
+    local query
+    query=$(zenity --entry --title="Search Documents" --text="Enter search term:" 2>/dev/null) || exit 0
+    rg -i --files "${ARCHIVE_DIR}" 2>/dev/null | head -50 || echo "No documents cataloged"
+}
+
+view_categories() {
+    zenity --info --title="Living Archive Categories" \
+        --text="Categories created in ~/.local/share/living-archive/\n\nProjects: $(wc -l < "${ARCHIVE_DIR}/projects.txt" 2>/dev/null || echo 0)\nPhotos: $(wc -l < "${ARCHIVE_DIR}/photos.txt" 2>/dev/null || echo 0)\nDocuments: $(wc -l < "${ARCHIVE_DIR}/documents.txt" 2>/dev/null || echo 0)" 2>/dev/null || true
+}
+
+show_menu
