@@ -8,5 +8,5 @@ iso_application="aetherOS Live/Rescue CD"
 iso_version="0.1.0-demo.1"
 install_dir="aetheros"
 buildmodes=("iso")
-bootmodes=("bios.syslinux" "uefi.grub")
+bootmodes=("uefi.grub")
 arch="x86_64"

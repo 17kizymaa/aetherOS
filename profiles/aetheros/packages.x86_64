@@ -28,3 +28,10 @@ networkmanager
 # Filesystem tools
 dosfstools
 e2fsprogs
+
+# Phase 2: Core apps
+xfce4-terminal
+thunar
+mousepad
+firefox
+zram-generator
