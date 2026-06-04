@@ -10,3 +10,8 @@ install_dir="aetheros"
 buildmodes=("iso")
 bootmodes=("uefi.grub")
 arch="x86_64"
+
+# File permissions (uid, gid, mode)
+file_permissions=(
+    ["airootfs/etc/sudoers.d/demo"]="0:0:0440"
+)

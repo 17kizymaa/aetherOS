@@ -12,7 +12,7 @@ Type=oneshot
 ExecStart=/usr/bin/bash -c '\
   if ! id demo &>/dev/null; then \
     useradd -m -G wheel -s /bin/bash demo; \
-    echo "demo" | passwd --stdin demo 2>/dev/null || true; \
+    echo "demo:demo" | chpasswd 2>/dev/null || true; \
   fi'
 RemainAfterExit=yes
 
