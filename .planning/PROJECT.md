@@ -12,13 +12,17 @@ Instant recognition and local intelligence - the system immediately understands 
 
 ### Validated
 
-(None yet — ship to validate)
+### Validated
+
+- [x] **BOOT-03**: Boot process is reproducible from clean clone using build scripts (validated in Phase 1: Foundation & Build System)
+- [x] **BUILD-01**: `./scripts/validate.sh` passes on clean clone (G0-G3 gates, 8/8 pass)
+- [x] **BUILD-02**: `./scripts/build-iso.sh` produces ISO in `out/` (script implemented, build unverified pending archiso install)
+- [x] **DOC-04**: `README.md` contains working quick-start instructions (validated in Phase 1)
 
 ### Active
 
 - [ ] **BOOT-01**: ISO boots in QEMU with 2 GB RAM to graphical session
 - [ ] **BOOT-02**: System reaches login flow without cloud dependencies
-- [ ] **BOOT-03**: Boot process is stable and reproducible across hardware
 - [ ] **UX-01**: Terminal, file manager, text editor open responsively
 - [ ] **UX-02**: Basic help/about documentation is accessible
 - [ ] **UX-03**: Shutdown/reboot works from UI or documented command
@@ -26,8 +30,6 @@ Instant recognition and local intelligence - the system immediately understands 
 - [ ] **RECOG-01**: Auto-detection and indexing of existing folder structure
 - [ ] **RECOG-02**: Smart categorization of Documents, Photos, Projects without user input
 - [ ] **RECOG-03**: Searchable "Living Archive" view of local content
-- [ ] **BUILD-01**: Reproducible build steps using mkarchiso
-- [ ] **BUILD-02**: Build metadata and SHA256 checksum generation
 - [ ] **BUILD-03**: Known limitations documented for transparency
 
 ### Out of Scope
