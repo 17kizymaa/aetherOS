@@ -11,7 +11,7 @@ These requirements must ship for the demo to pass validation gates G0-G8.
 
 - [ ] **BOOT-01**: ISO boots in QEMU with 2 GB RAM, 2 vCPU
 - [ ] **BOOT-02**: System reaches graphical session (XFCE) without cloud dependencies
-- [ ] **BOOT-03**: Boot is reproducible from clean clone using `./scripts/build-iso.sh`
+- [x] **BOOT-03**: Boot is reproducible from clean clone using `./scripts/build-iso.sh`
 - [ ] **BOOT-04**: Shutdown/reboot works from UI or documented command
 
 ### Core UX
@@ -24,8 +24,8 @@ These requirements must ship for the demo to pass validation gates G0-G8.
 
 ### Build Provenance
 
-- [ ] **BUILD-01**: `./scripts/validate.sh` passes on clean clone
-- [ ] **BUILD-02**: `./scripts/build-iso.sh` produces ISO in `out/`
+- [x] **BUILD-01**: `./scripts/validate.sh` passes on clean clone
+- [x] **BUILD-02**: `./scripts/build-iso.sh` produces ISO in `out/`
 - [ ] **BUILD-03**: `./scripts/collect-artifacts.sh` generates SHA256 checksum
 - [ ] **BUILD-04**: Build metadata is captured (archiso version, git SHA, timestamp)
 
@@ -34,7 +34,7 @@ These requirements must ship for the demo to pass validation gates G0-G8.
 - [ ] **DOC-01**: `context/CURRENT_STATE.md` reflects actual project state
 - [ ] **DOC-02**: `context/KNOWN_ISSUES.md` lists remaining issues
 - [ ] **DOC-03**: `CHANGELOG.md` has demo entry
-- [ ] **DOC-04**: `README.md` contains working quick-start instructions
+- [x] **DOC-04**: `README.md` contains working quick-start instructions
 
 ### Local-First AI Boundaries
 

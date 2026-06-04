@@ -22,7 +22,7 @@
 
 **Requirements:** BOOT-03, BUILD-01, BUILD-02, DOC-04
 
-**Plans:** 5 plans
+**Plans:** 5/5 plans complete
 Plans:
 **Wave 1**
 
