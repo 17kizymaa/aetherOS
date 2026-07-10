@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted (supersedes ADR-0001)
+Accepted (supersedes ADR-0001) — confirmed by 17kizymaa 2026-07-10 (sprint gate G6)
 
 ## Decision
 
