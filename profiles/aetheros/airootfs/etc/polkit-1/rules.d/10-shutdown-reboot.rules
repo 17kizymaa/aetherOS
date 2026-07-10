@@ -1,0 +1,13 @@
+// airootfs/etc/polkit-1/rules.d/10-shutdown-reboot.rules
+// Allow demo user to shutdown/reboot without password
+// Phase 2: Core Desktop & Boot
+
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.login1.power-off" ||
+         action.id == "org.freedesktop.login1.reboot" ||
+         action.id == "org.freedesktop.login1.power-off-multiple-sessions" ||
+         action.id == "org.freedesktop.login1.reboot-multiple-sessions") &&
+        subject.user == "demo") {
+        return polkit.Result.YES;
+    }
+});

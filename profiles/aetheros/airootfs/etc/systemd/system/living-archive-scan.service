@@ -1,0 +1,15 @@
+# airootfs/etc/systemd/system/living-archive-scan.service
+# Living Archive content scanner at first boot
+# Phase 4: Content Recognition & Living Archive
+
+[Unit]
+Description=Living Archive Content Scanner
+ConditionFirstBoot=yes
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/living-archive.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

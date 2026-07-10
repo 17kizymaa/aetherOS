@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Welcome to aetherOS
+Comment=About this system
+Exec=mousepad /home/demo/Desktop/aetheros-readme.txt
+Type=Application
+Terminal=false
+Categories=Utility;
+Icon=help-about

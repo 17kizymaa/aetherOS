@@ -6,7 +6,7 @@ The goal of this sprint is to demonstrate that old or low-end hardware can becom
 
 Rules:
 
-1. Debian Stable + XFCE is the default base for this sprint.
+1. Arch Linux + XFCE is the default base for this sprint.
 2. No custom kernel, package manager, programming language, or independent repository.
 3. All product changes must be represented as scripts, manifests, configs, docs, or validation logs.
 4. Chat logs are not source of truth. The repository is source of truth.

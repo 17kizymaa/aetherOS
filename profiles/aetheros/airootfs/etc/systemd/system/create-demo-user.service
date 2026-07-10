@@ -1,0 +1,20 @@
+# airootfs/etc/systemd/system/create-demo-user.service
+# Create demo user at first boot (one-shot)
+# Phase 2: Core Desktop & Boot
+
+[Unit]
+Description=Create demo user for aetherOS
+Before=lightdm.service
+ConditionFirstBoot=yes
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c '\
+  if ! id demo &>/dev/null; then \
+    useradd -m -G wheel -s /bin/bash demo; \
+    echo "demo:demo" | chpasswd 2>/dev/null || true; \
+  fi'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
