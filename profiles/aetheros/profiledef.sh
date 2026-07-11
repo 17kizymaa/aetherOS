@@ -13,5 +13,10 @@ arch="x86_64"
 
 # File permissions (uid, gid, mode)
 file_permissions=(
-    ["airootfs/etc/sudoers.d/demo"]="0:0:0440"
+    ["/etc/sudoers.d/demo"]="0:0:0440"
 )
+
+# Required by archiso ≥83/88 (limit-test LT-2 fix 2026-07-10)
+pacman_conf="pacman.conf"
+airootfs_image_type="squashfs"
+airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
